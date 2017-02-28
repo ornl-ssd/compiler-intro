@@ -9,6 +9,7 @@ objectives:
 - "Learn how to use the C++ compiler, and the some of its options"
 - "Learn about running user-created programs"
 keypoints:
+- "A compiler is used to create an executable version of a program from its source code."
 ---
 As mentioned, a compiler converts source code into machine code that can execute on a target computer. Let's start with a simple example. Download the
 [`hello_world.cpp` file]({{ page.root }}/code/hello_world.cpp) and place it in a directory. This file contains the source code to a very simple program that prints "Hello World!" and exits. 
