@@ -81,3 +81,4 @@ func is 3
 > Create a third file called `func2.cpp` with a function that multiplies its argument with itself (e.g. `a * a`). Add a declaration of the
 > function to the `func.h` file and call the function from `hello_world.cpp`. Which files do you need to compile? Comple these to object
 > files, then combine `hello_world.o`, `func.o`, and `func2.o` to create a new executable. Did it work?
+{: .challenge}
