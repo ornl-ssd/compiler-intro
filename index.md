@@ -3,15 +3,17 @@ layout: lesson
 root: .
 ---
 In [Introduction to Python](http://swcarpentry.github.io/python-novice-inflammation/) we saw how to run a Python program using the `python`
-command. This is known as an interpreted implementation of Python (or *interpreter* for short). This is a process whereby the source code is 
-translated into an intermediate representation and then executed by the interpreter, not directly by the target machine. 
-The interpreter is usually written specifically for the native machine. As an example, you could consider the multiplier operation – the “*”. 
-If the interpreter sees this in your code, then at run time it would call its own definition of the multiplier function – maybe something called 
-“multiply(x,y)”. And then that “multiply(x,y)” would execute the machine code’s equivalent of the multiply instruction.
+command. This is known as an interpreted implementation of Python (or *interpreter* for short). An interpreter translates the source code 
+into an intermediate representation and then executes it, rather than being executed directly by the target machine. 
+The interpreter itself is usually written specifically for the target machine. 
 
-Although interpreted implementations offer many benefits, such as fast prototyping, object introspection, and ..., they are also typically much
-slower to execute than compiled implementations. This is one of the main reasons why languages such as C, C++, and Fortran are typically compiled 
-(although interpreters do exist).
+As an example, you could consider the multiplier operation – the “*”. 
+If the interpreter sees this in your code, then at run time it would call its own definition of the multiplier function – maybe something called 
+“multiply(x,y)”  - and then that “multiply(x,y)” would execute the target machine’s equivalent of the multiply instruction.
+
+Although interpreted implementations offer many benefits, such as fast prototyping, object introspection, and interactive development, they 
+also typically execute programs much more slowly than compiled versions. This is one of the main reasons why languages such as C, C++, and Fortran 
+are typically compiled (although interpreters for these do exist).
 
 In a compiled implementation of a language, a program called a compiler will translate the program directly into code that is specific to the 
 target machine, which is also known as machine code – basically code that is specific to a given processor and operating system. Then the computer 
