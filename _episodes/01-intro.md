@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 teaching: 15
-exercises: 15
+exercises: 0
 questions:
 - "How can I compile a C++ program?"
 - "How do I run a C++ program?"
@@ -107,6 +107,6 @@ Some of the more useful options include:
 : Specify the *language* standard to compile for
 
 -O*N*
-: Specify which optimization level to use
+: Specify which optimization level to use (*N*=0,1,2,3,4)
 
 We will be looking at how to use some of these in later lessons.

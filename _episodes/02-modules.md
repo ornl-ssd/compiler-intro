@@ -1,13 +1,18 @@
 ---
 title: "Multipe Source Files"
 teaching: 15
-exercises: 15
+exercises: 5
 questions:
+- "How do I compile programs consiting of multiple source files?"
 objectives:
+- "Learn how to use the compile command for multiple source files."
+- "Learn how to use header files."
 keypoints:
+- "Multiple source files can be combined into a single executable."
+- "Header files are used to separate declarations from definitions."
 ---
 Like Python, C++ programs can be comprised of multiple modules. Modules in C++ are not imported the same way they are for Python, however. Instead, 
-the modules must be combined together into a single executable.
+the modules must be combined together into a single executable in order for the functionality to be accessible.
 
 Let's try it. First, create a new source file called `func.cpp` and put the following code in it:
 
@@ -19,7 +24,7 @@ int func(int a) {
 ~~~
 {: .code}
 
-Next we need to modify the `hello_world.cpp	 program to use the function. Edit `hello_world.cpp` and change it to:
+Next we need to modify the `hello_world.cpp` program to use the function. Edit `hello_world.cpp` and change it to:
 
 ~~~
 #include <iostream>
@@ -74,10 +79,31 @@ $
 {: .bash}
 
 > ## Challenge
-> In C++, you must first declare the interface of the function you want to use. We did this by adding a line to `hello_world.cpp`.
+> In C++, you must first *declare* the interface of the function you want to use. We did this by adding a line to `hello_world.cpp`.
 > However the more usual approach is to put these declarations into a *header* file, which by convention has the same name as the
-> source file, but ends in `.h`. These header files are then *included* using the `#include` statement in order to use them.
+> source file, but ends in `.h` instead of `.cpp`. These header files are then *included* using a `#include` statement in order to use them.
+> The source code for the function itself is called the *definition* of the function.
 >
-> Move the declaration of `extern int func(int);` in `hello_world.cpp` into a file called `func.h`. Then replace the declaration with the line
-> `#include "func.h"` and try compiling the program again using the same command as last time. Did you get it to work?
+> Replace the line 
+>
+> ~~~
+> extern int func(int);
+> ~~~
+> {: .code}
+>
+> in `hello_world.cpp` with the line:
+>
+> ~~~
+> #include "func.h"
+> ~~~
+> {: .code}
+>
+> Then create a new file called `func.h` and add the following line:
+>
+> ~~~
+> extern int func(int);
+> ~~~
+> {: .code}
+> 
+> Finally, try compiling the program again using the same command as last time. Did you get it to work?
 {: .challenge}
