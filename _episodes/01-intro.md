@@ -90,16 +90,22 @@ Some of the more useful options include:
 
 -o *file*
 : Write output to *file*
+
 -I *dir*
 : Add *dir* to the include search path
+
 -w
 : Suppress all warnings
+
 -g
 : Generate source-level debug information
+
 -c
 : Only run preprocess, compile, and assemble steps
+
 -std=*language*
 : Specify the *language* standard to compile for
+
 -O*N*
 : Specify which optimization level to use
 
