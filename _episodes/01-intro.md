@@ -13,11 +13,11 @@ keypoints:
 As mentioned, a compiler converts source code into machine code that can execute on a target computer. Let's start with a simple example. Download the
 [`hello_world.cpp` file]({{ page.root }}/code/hello_world.cpp) and place it in a directory. This file contains the source code to a very simple program that prints "Hello World!" and exits. 
 If this was Python, we would just run it using the `python` command. However, for C++, we must first create an *executable* version of the program
-using the C++ compiler. To do this, open a shell and change to the same directory in which you placed the source file. Then run the command:
+using the C++ compiler. To do this, open a shell and change to the same directory in which you placed the source file. Then enter the following
+command at the shell prompt:
 
 ~~~
 $ c++ -o hello_world hello_world.cpp
-$
 ~~~
 {: .bash}
 
@@ -27,7 +27,6 @@ of the program (or simply "executable") called `hello_world`. Now you should be 
 ~~~
 $ ./hello_world
 Hello World!
-$
 ~~~
 {: .bash}
 
@@ -36,11 +35,11 @@ We did it! We ran our first C++ program.
 > ## The PATH environment variable
 >
 > We need to prefix the command by `./` so that the shell can find it. By default, the shell does not include the current
-> directory (`.`) in the PATH as this can present a security risk.
+> directory (`.`) in the list of directories to search (the `PATH` environment variable) as this can present a security risk.
 {: .callout}
 
 The `c++` command has many options, and these will depend on your operating system and the version of the compiler you have installed. On Linux,
-the most common compiler is the GNU Compiler. This is also the version you'll be using on Windows. On Mac OS X, the compiler is known as `clang`.
+the most common compiler is the GNU compiler. This is also the version you'll be using on Windows. On Mac OS X, the compiler is known as `clang`.
 
 To see the options available, use the command `c++ --help`. A portion of the output from `clang` is shown below.
 
@@ -89,12 +88,19 @@ OPTIONS:
 
 Some of the more useful options include:
 
-* -o <file>	Write output to <file>
-* -I <dir>	Add <dir> to the include search path
-* -w	Suppress all warnings
-* -g	Generate source-level debug information
-* -c	Only run preprocess, compile, and assemble steps
-* -std=<language>	Specify the language standard to compile for
-* -O<N>	Specify which optimization level to use
+-o *file*
+: Write output to *file*
+-I *dir*
+: Add *dir* to the include search path
+-w
+: Suppress all warnings
+-g
+: Generate source-level debug information
+-c
+: Only run preprocess, compile, and assemble steps
+-std=*language*
+: Specify the *language* standard to compile for
+-O*N*
+: Specify which optimization level to use
 
 We will be looking at how to use some of these in later lessons.
