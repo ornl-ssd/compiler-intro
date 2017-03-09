@@ -3,4 +3,4 @@ layout: page
 title: "Setup"
 permalink: /setup/
 ---
-FIXME
+See [Training Setup]({{ site.url }}/training/setup)
