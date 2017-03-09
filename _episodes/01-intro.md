@@ -12,7 +12,7 @@ keypoints:
 - "A compiler is used to create an executable version of a program from its source code."
 ---
 As mentioned, a compiler converts source code into machine code that can execute on a target computer. Let's start with a simple example. Download the
-[`hello_world.cpp` file]({{ page.root }}/code/hello_world.cpp) and place it in a directory. This file contains the source code to a very simple program that prints "Hello World!" and exits. 
+[`hello_world.cpp`]({{ page.root }}/code/hello_world.cpp) file and place it in a directory. This file contains the source code to a very simple program that prints "Hello World!" and exits. 
 If this was Python, we would just run it using the `python` command. However, for C++, we must first create an *executable* version of the program
 using the C++ compiler. To do this, open a shell and change to the same directory in which you placed the source file. Then enter the following
 command at the shell prompt:
